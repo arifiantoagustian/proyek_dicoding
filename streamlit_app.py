@@ -65,7 +65,7 @@ with col1:
     st.markdown(f"Total Order: **{total_order}**")
 
 with col2:
-    total_revenue = format_currency(daily_orders_df["revenue"].sum(), "IDR", locale="id_ID")
+    total_revenue = format_currency(daily_orders_df["revenue"].sum(), "R$", locale="id_ID")
     st.markdown(f"Total Revenue: **{total_revenue}**")
 
 fig, ax = plt.subplots(figsize=(12, 6))
@@ -85,11 +85,11 @@ st.subheader("Jumlah Pengeluaran Pelanggan E-Commerce")
 col1, col2 = st.columns(2)
 
 with col1:
-    total_spend = format_currency(sum_spend_df["total_spend"].sum(), "IDR", locale="id_ID")
+    total_spend = format_currency(sum_spend_df["total_spend"].sum(), "R$", locale="id_ID")
     st.markdown(f"Total Spend: **{total_spend}**")
 
 with col2:
-    avg_spend = format_currency(sum_spend_df["total_spend"].mean(), "IDR", locale="id_ID")
+    avg_spend = format_currency(sum_spend_df["total_spend"].mean(), "R$", locale="id_ID")
     st.markdown(f"Average Spend: **{avg_spend}**")
 
 fig, ax = plt.subplots(figsize=(12, 6))
