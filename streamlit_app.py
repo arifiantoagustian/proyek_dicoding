@@ -105,16 +105,12 @@ ax.tick_params(axis="y", labelsize=15)
 st.pyplot(fig)
 
 # Order Items
-st.subheader("Order Items")
-col1, col2 = st.columns(2)
+st.subheader("Kategori Produk dengan Penjualan Terbanyak")
+col1 = st.columns(1)
 
 with col1:
     total_items = sum_order_items_df["product_count"].sum()
     st.markdown(f"Total Items: **{total_items}**")
-
-with col2:
-    avg_items = sum_order_items_df["product_count"].mean()
-    st.markdown(f"Average Items: **{avg_items}**")
 
 fig, ax = plt.subplots(nrows=1, ncols=2, figsize=(45, 25))
 
