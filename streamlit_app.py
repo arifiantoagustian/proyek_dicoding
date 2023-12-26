@@ -107,9 +107,8 @@ st.pyplot(fig)
 # Order Items
 st.subheader("Kategori Produk dengan Penjualan Terbanyak")
 
-
-    total_items = sum_order_items_df["product_count"].sum()
-    st.markdown(f"Total Items: **{total_items}**")
+total_items = sum_order_items_df["product_count"].sum()
+st.markdown(f"Total Items: **{total_items}**")
 
 fig, ax = plt.subplots(nrows=1, figsize=(45, 25))
 
