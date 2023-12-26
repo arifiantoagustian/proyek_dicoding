@@ -53,10 +53,10 @@ state, most_common_state = function.create_bystate_df()
 order_status, common_status = function.create_order_status()
 
 # Title
-st.header("E-Commerce Dashboard :convenience_store:")
+st.header("Dashboard E-Commerce")
 
 # Daily Orders
-st.subheader("Daily Orders")
+st.subheader("Total Penjualan Harian E-Commerce")
 
 col1, col2 = st.columns(2)
 
@@ -81,7 +81,7 @@ ax.tick_params(axis="y", labelsize=15)
 st.pyplot(fig)
 
 # Customer Spend Money
-st.subheader("Customer Spend Money")
+st.subheader("Jumlah Pengeluaran Pelanggan E-Commerce")
 col1, col2 = st.columns(2)
 
 with col1:
@@ -140,7 +140,7 @@ ax[1].tick_params(axis='x', labelsize=30)
 st.pyplot(fig)
 
 # Review Score
-st.subheader("Review Score")
+st.subheader("Penilaian Pelayanan")
 col1,col2 = st.columns(2)
 
 with col1:
@@ -158,14 +158,14 @@ sns.barplot(x=review_score.index,
             palette=["#068DA9" if score == common_score else "#D3D3D3" for score in review_score.index]
             )
 
-plt.title("Rating by customers for service", fontsize=15)
+plt.title("Penilaian Pelayanan oleh Pelanggan", fontsize=15)
 plt.xlabel("Rating")
 plt.ylabel("Count")
 plt.xticks(fontsize=12)
 st.pyplot(fig)
 
 # Customer Demographic
-st.subheader("Customer Demographic")
+st.subheader("Demografi Pelanggan")
 tab1, tab2, tab3 = st.tabs(["State", "Order Status", "Geolocation"])
 
 with tab1:
