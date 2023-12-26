@@ -30,9 +30,6 @@ with st.sidebar:
     # Title
     st.title("Arifianto")
 
-    # Logo Image
-    st.image("./dashboard/gcl.png")
-
     # Date Range
     start_date, end_date = st.date_input(
         label="Select Date Range",
