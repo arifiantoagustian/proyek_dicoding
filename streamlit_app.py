@@ -106,11 +106,17 @@ st.pyplot(fig)
 
 # Order Items
 st.subheader("Kategori Produk dengan Penjualan Terbanyak")
+col1, col2 = st.columns(2)
 
-total_items = sum_order_items_df["product_count"].sum()
-st.markdown(f"Total Items: **{total_items}**")
+with col1:
+    total_items = sum_order_items_df["product_count"].sum()
+    st.markdown(f"Total Items: **{total_items}**")
 
-fig, ax = plt.subplots(nrows=1, figsize=(45, 25))
+with col2:
+    avg_items = sum_order_items_df["product_count"].mean()
+    st.markdown(f"Average Items: **{avg_items}**")
+
+fig, ax = plt.subplots(nrows=1, ncols=2, figsize=(45, 25))
 
 colors = ["#068DA9", "#D3D3D3", "#D3D3D3", "#D3D3D3", "#D3D3D3"]
 
